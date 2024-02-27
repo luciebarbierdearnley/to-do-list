@@ -21,3 +21,7 @@ section .search-input {
   width: 85%;
   padding-left: 10px;
 }
+
+section .add:hover {
+  cursor: pointer;
+}

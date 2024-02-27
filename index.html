@@ -13,24 +13,27 @@
         <h1>To do</h1>
       </header>
       <section>
-        <form>
+        <form id="form">
           <input
             type="text"
             placeholder="Add item"
             required
-            class="search-input" />
+            class="search-input"
+            id="user-input" />
           <input
             type="submit"
             value="+"
-            class="bg-lime-600 p-2 ps-4 pe-4 rounded-full text-white" />
+            class="bg-lime-600 p-2 ps-4 pe-4 rounded-full text-white add"
+            id="add-button" />
         </form>
         <hr />
       </section>
       <main>
         <ul>
-          <li></li>
+          <li id="items"></li>
         </ul>
       </main>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
