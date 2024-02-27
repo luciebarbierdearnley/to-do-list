@@ -3,9 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To do web app</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div class="font-serif box-container">
+      <header>
+        <h1>To do</h1>
+      </header>
+      <section>
+        <form>
+          <input
+            type="text"
+            placeholder="Add item"
+            required
+            class="search-input" />
+          <input
+            type="submit"
+            value="+"
+            class="bg-lime-600 p-2 ps-4 pe-4 rounded-full text-white" />
+        </form>
+        <hr />
+      </section>
+      <main>
+        <ul>
+          <li></li>
+        </ul>
+      </main>
+    </div>
   </body>
 </html>
