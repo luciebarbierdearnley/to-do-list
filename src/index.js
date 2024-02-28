@@ -3,8 +3,8 @@ function addToList(event) {
   let enteredItem = document.querySelector("#user-input").value;
   let listItems = document.querySelector("#items");
 
-  listItems.innerHTML += ` <div class="display-items">
-            <li id="delete-item">${enteredItem}s</li>
+  listItems.innerHTML += ` <div class="display-items" id="todo">
+            <li id="delete-item">${enteredItem}</li>
             <button class="bg-lime-600 ps-4 pe-4 rounded-full text-white add" id="delete-button">x</button>
           </div>`;
 
@@ -13,10 +13,9 @@ function addToList(event) {
 }
 
 function deleteItem(event) {
-  let deleteButton = document.getElementById("delete-button");
-  let deleteItem = document.getElementById("delete-item");
-  deleteButton.remove();
-  deleteItem.remove();
+  let item = event.target;
+  let deleteToDo = item.parentElement;
+  deleteToDo.remove();
 }
 
 let addButtonEl = document.querySelector("#form");
