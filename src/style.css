@@ -25,6 +25,7 @@ section .search-input {
 
 section .add:hover {
   cursor: pointer;
+  transform: scale(1.25);
 }
 
 main ul {
