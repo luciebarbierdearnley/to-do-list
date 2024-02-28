@@ -18,10 +18,23 @@ section form {
 }
 
 section .search-input {
-  width: 85%;
+  width: 89%;
   padding-left: 10px;
+  font-size: 20px;
 }
 
 section .add:hover {
   cursor: pointer;
+}
+
+main ul {
+  margin: 30px 20px;
+  list-style-type: disc;
+}
+
+.display-items {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2.5;
+  margin-bottom: 10px;
 }
