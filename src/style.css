@@ -1,26 +1,34 @@
 body .box-container {
-  width: 30%;
-  display: block;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
   margin: 120px auto;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: none;
+  border-radius: 7px;
   padding: 35px;
   background: linear-gradient(#cfcdc2, #c1c2ad);
+  box-shadow: 5px 5px 5px 0px rgba(140, 146, 172, 0.1);
 }
 
 header h1 {
   font-size: 50px;
   margin-bottom: 40px;
+  color: #4a554a;
 }
 
 section form {
   margin-bottom: 10px;
+  align-items: center;
 }
 
 section .search-input {
   width: 86%;
   padding-left: 10px;
   font-size: 20px;
+}
+
+section.add {
+  align-items: end;
 }
 
 section .add:hover {
@@ -38,11 +46,13 @@ main ul .display-items {
   justify-content: space-between;
   line-height: 2.5;
   margin-bottom: 10px;
+  font-size: 18px;
+  color: #4a554a;
 }
 
 main ul .delete-button {
   background-color: #65a20c;
   color: white;
   border-radius: 100%;
-  padding: 0px 15px;
+  padding: 0px 17px;
 }
