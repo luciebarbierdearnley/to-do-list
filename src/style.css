@@ -18,24 +18,32 @@ section form {
 }
 
 section .search-input {
-  width: 89%;
+  width: 86%;
   padding-left: 10px;
   font-size: 20px;
 }
 
 section .add:hover {
   cursor: pointer;
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
 
 main ul {
-  margin: 30px 20px;
+  margin: 40px 20px;
   list-style-type: disc;
 }
 
-.display-items {
+main ul .display-items {
   display: flex;
   justify-content: space-between;
   line-height: 2.5;
   margin-bottom: 10px;
+}
+
+main ul .delete-button {
+  background-color: #65a20c;
+  color: white;
+  border-radius: 100%;
+  padding: 0px 15px;
+  margin-right: 10px;
 }

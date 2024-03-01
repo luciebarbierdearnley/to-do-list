@@ -1,22 +1,35 @@
+const addButtonEl = document.querySelector("#form");
+const input = document.querySelector("input");
+const listItems = document.querySelector("#items");
+
 function addToList(event) {
   event.preventDefault();
-  let enteredItem = document.querySelector("#user-input").value;
-  let listItems = document.querySelector("#items");
+  const itemDiv = document.createElement("div");
+  const listItemEL = document.createElement("li");
+  const enteredItem = document.querySelector("#user-input").value;
+  listItemEL.innerHTML = enteredItem;
+  const deleteButton = document.createElement("button");
 
-  listItems.innerHTML += ` <div class="display-items" id="todo">
-            <li id="delete-item">${enteredItem}</li>
-            <button class="bg-lime-600 ps-4 pe-4 rounded-full text-white add" id="delete-button">x</button>
-          </div>`;
+  itemDiv.classList.add("display-items");
+  deleteButton.classList.add("delete-button");
+  deleteButton.innerHTML = "x";
 
-  let deleteAction = document.getElementById("delete-button");
-  deleteAction.addEventListener("click", deleteItem);
+  listItems.appendChild(itemDiv);
+  itemDiv.appendChild(listItemEL);
+  itemDiv.appendChild(deleteButton);
+
+  input.value = "";
 }
 
 function deleteItem(event) {
-  let item = event.target;
-  let deleteToDo = item.parentElement;
-  deleteToDo.remove();
+  const clickedItem = event.target;
+  console.log(clickedItem);
+
+  if (clickedItem) {
+    const removeAction = clickedItem.parentElement;
+    removeAction.remove();
+  }
 }
 
-let addButtonEl = document.querySelector("#form");
 addButtonEl.addEventListener("submit", addToList);
+listItems.addEventListener("click", deleteItem);
