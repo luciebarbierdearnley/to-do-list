@@ -56,3 +56,8 @@ main ul .delete-button {
   border-radius: 100%;
   padding: 0px 17px;
 }
+
+footer {
+  margin-top: -99px;
+  color: darkgray;
+}
